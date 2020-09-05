@@ -2,7 +2,7 @@
 int add(a,b)
 {
     return a+b;
-    int c,d`;		    
+    int c,d,t`;		    
 
 
 
