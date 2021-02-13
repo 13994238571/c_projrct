@@ -12,3 +12,14 @@ int main(int argc, char* argv[])
 
 
 }
+
+void interchange(int* u, int* v)
+{
+	int temp;
+	temp = *u;
+	*u = *v;
+	*v = temp;
+
+
+
+}
