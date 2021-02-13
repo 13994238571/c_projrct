@@ -34,4 +34,5 @@ int sum(int* ar, int n)
 int sum(int*, int)
 int sum(int ar[], int n)
 int sun(int [], int)
+ptr2 - ptr1 = 2, 意思是这两个指针所指向的两个元素相隔两个int.  而不是两个字节
 */
