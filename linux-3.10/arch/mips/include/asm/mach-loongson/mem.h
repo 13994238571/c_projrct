@@ -1,0 +1,58 @@
+/*
+ * Copyright (C) 2009 Lemote, Inc.
+ * Author: Wu Zhangjin <wuzhangjin@gmail.com>
+ *
+ * This program is free software; you can redistribute	it and/or modify it
+ * under  the terms of	the GNU General	 Public License as published by the
+ * Free Software Foundation;  either version 2 of the  License, or (at your
+ * option) any later version.
+ */
+
+#ifndef __ASM_MACH_LOONGSON_MEM_H
+#define __ASM_MACH_LOONGSON_MEM_H
+
+#define SYSTEM_RAM_LOW          1
+#define SYSTEM_RAM_HIGH         2
+#define MEM_RESERVED            3
+#define PCI_IO                  4
+#define PCI_MEM                 5
+#define LOONGSON_CFG_REG        6
+#define VIDEO_ROM               7
+#define ADAPTER_ROM             8
+#define ACPI_TABLE              9
+#define SMBIOS_TABLE            10
+#define UMA_VIDEO_RAM           11
+#define VUMA_VIDEO_RAM          12
+#define SYSTEM_RAM_LOW_DMA      13
+#define SYSTEM_RAM_HIGH_DMA     14
+#define ACPI_NVS                15
+#define MAX_MEMORY_TYPE         16
+
+/*
+ * high memory space
+ *
+ * in loongson2e, starts from 512M
+ * in loongson2f, starts from 2G 256M
+ */
+#ifdef CONFIG_CPU_LOONGSON2E
+#define LOONGSON_HIGHMEM_START	0x20000000
+#else
+#define LOONGSON_HIGHMEM_START	0x90000000
+#endif
+
+/*
+ * the peripheral registers(MMIO):
+ *
+ * On the Lemote Loongson 2e system, reside between 0x1000:0000 and 0x2000:0000.
+ * On the Lemote Loongson 2f system, reside between 0x1000:0000 and 0x8000:0000.
+ */
+
+#define LOONGSON_MMIO_MEM_START 0x10000000
+
+#ifdef CONFIG_CPU_LOONGSON2E
+#define LOONGSON_MMIO_MEM_END	0x20000000
+#else
+#define LOONGSON_MMIO_MEM_END	0x80000000
+#endif
+
+#endif /* __ASM_MACH_LOONGSON_MEM_H */
