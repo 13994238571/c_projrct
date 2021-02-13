@@ -25,12 +25,19 @@ int menu(void)
 
 int getnights(void)
 {
+<<<<<<< HEAD
 	int nights, ff;
 	printf("How many nights are needed?\n");
 	while(ff = scanf("%d", &nights) != 1) {
 		scanf("%*s");
 		printf("iiii");
 		putchar(ff);
+=======
+	int nights;
+	printf("How many nights are needed?\n");
+	while(scanf("%d", &nights) != 1) {
+		scanf("%*s");
+>>>>>>> 9f40986e524c9de2b4b0103d2d92c7b0b05c87f1
 		printf("Please enter an integer, such as 2\n");
 
 
